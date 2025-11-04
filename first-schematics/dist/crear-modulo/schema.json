@@ -1,0 +1,18 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "$id": "CrearModuloSchema",
+  "title": "Opciones de Crear Módulo",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "El nombre del módulo.",
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      },
+      "x-prompt": "Ingresa el nombre del módulo:"
+    }
+  },
+  "required": ["name"]
+}

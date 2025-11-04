@@ -1,0 +1,10 @@
+{
+  "$schema": "../node_modules/@angular-devkit/schematics/collection-schema.json",
+  "schematics": {
+    "crear-modulo": {
+      "description": "My first schematic.",
+      "factory": "./crear-modulo/index#crearModulo",
+      "schema": "./crear-modulo/schema.json"
+    }
+  }
+}

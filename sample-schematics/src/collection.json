@@ -9,6 +9,11 @@
       "description": "A blank schematic.",
       "factory": "./greeter/index#greeter",
       "schema": "./greeter/schema.json"
+    },
+    "http-resource": {
+      "description": "A blank schematic.",
+      "factory": "./http-resource/index#httpResource",
+      "schema": "./http-resource/schema.json"
     }
   }
 }

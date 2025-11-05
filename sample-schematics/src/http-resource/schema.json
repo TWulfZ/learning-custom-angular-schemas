@@ -1,0 +1,31 @@
+{
+    "$schema": "http://json-schema.org/schema",
+    "$id": "HttpResource",
+    "title": "Http Resource",
+    "type": "object",
+    "description": "Service class to perform http operations",
+    "properties": {
+        "name": {
+            "type": "string",
+            "description": "Name of the http service class",
+            "$default": {
+                "$source": "argv",
+                "index": 0
+            },
+            "x-prompt": "Enter the name of the http service class"
+        },
+        "url": {
+            "type": "string",
+            "description": "Base Url of the API service",
+            "x-prompt": "What is the API base url (eg: http://domain.com/api/resource)?"
+        },
+        "findOne": {
+            "type": "boolean",
+            "description": "True if want to generate a findOne method else false",
+            "default": false
+        }
+    },
+    "required": [
+        "name"
+    ]
+}

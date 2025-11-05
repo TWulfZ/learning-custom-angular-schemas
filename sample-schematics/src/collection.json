@@ -4,6 +4,10 @@
     "sample-schematics": {
       "description": "A blank schematic.",
       "factory": "./sample-schematics/index#sampleSchematics"
+    },
+    "greeter": {
+      "description": "A blank schematic.",
+      "factory": "./greeter/index#greeter"
     }
   }
 }

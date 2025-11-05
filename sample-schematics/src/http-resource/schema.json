@@ -23,6 +23,19 @@
             "type": "boolean",
             "description": "True if want to generate a findOne method else false",
             "default": false
+        },
+        "path": {
+            "type": "string",
+            "format": "path",
+            "description": "The path at which to create the service, relative to the workspace root.",
+            "visible": false
+        },
+        "project": {
+            "type": "string",
+            "description": "The name of the project.",
+            "$default": {
+                "$source": "projectName"
+            }
         }
     },
     "required": [

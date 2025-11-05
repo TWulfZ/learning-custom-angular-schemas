@@ -1,5 +1,5 @@
 {
-  "name": "sample-schematics",
+  "name": "@wulf/schemas",
   "version": "0.0.0",
   "description": "A blank schematics",
   "scripts": {
@@ -16,11 +16,12 @@
   "dependencies": {
     "@angular-devkit/core": "^20.3.8",
     "@angular-devkit/schematics": "^20.3.8",
+    "@schematics/angular": "^20.3.9",
     "typescript": "~5.9.2"
   },
   "devDependencies": {
-    "@types/node": "^20.17.19",
     "@types/jasmine": "~5.1.0",
+    "@types/node": "^20.17.19",
     "jasmine": "^5.0.0"
   }
 }

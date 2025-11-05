@@ -1,4 +1,5 @@
-import { Rule, SchematicContext, Tree } from '@angular-devkit/schematics';
+import { strings } from '@angular-devkit/core';
+import { apply, Rule, SchematicContext, Tree, url, template, mergeWith } from '@angular-devkit/schematics';
 import { Schema } from './schema';
 
 
@@ -6,12 +7,14 @@ import { Schema } from './schema';
 // per file.
 export function greeter(_options: Schema): Rule {
   return (tree: Tree, _context: SchematicContext) => {
-    let name = _options.name;
-
-    if(tree.exists('hello.js)')) {
-      tree.delete('hello.js');
-    }
-    tree.create('hello.js', `console.log('Hello ${name}!');`);
+    const sourceTemplate = url('./files');
+    const parametirizedTemplate = apply(sourceTemplate, [
+      template({
+        ..._options,
+        ...strings,
+      })
+    ]);
+    tree = mergeWith(parametirizedTemplate)(tree, _context) as Tree;
     return tree;
   };
 }

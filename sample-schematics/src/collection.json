@@ -14,6 +14,11 @@
       "description": "A blank schematic.",
       "factory": "./http-resource/index#httpResource",
       "schema": "./http-resource/schema.json"
+    },
+    "ng-add": {
+      "description": "A blank schematic.",
+      "factory": "./ng-add/index#ngAdd",
+      "schema": "./http-resource/schema.json"
     }
   }
 }
